@@ -1,0 +1,7 @@
+- if current_user_profile
+  h1 You are logged in
+  = link_to "Sign Out", destroy_user_profile_session_path, method: :delete
+- else
+  h1 You are not logged in
+  = link_to "Sign In", new_user_profile_session_path
+  = link_to "Sign Up", new_user_profile_registration_path
